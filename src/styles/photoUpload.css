@@ -1,0 +1,39 @@
+.dropzone{
+    height: 8rem;
+    margin: 1rem;
+    padding: 1rem;
+    border: 2px dashed rgb(255, 81, 0);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.addAvatarDiv{
+    display:inline-block;
+    position: absolute;
+    bottom: 15%;
+    right: 8%;
+    cursor: pointer;
+}
+.activeDrop{
+    border: 2px solid black;
+}
+
+.pictureDrop{
+    /* display: block; */
+    width: 83px;
+    height: 93px;
+}
+
+
+
+.addAvatarIcon{
+    background-color: gray;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    font-size: 30px;
+}

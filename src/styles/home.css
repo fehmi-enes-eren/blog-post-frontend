@@ -1,0 +1,184 @@
+.MuiPagination-ul{
+    justify-content:center;
+}
+.result{
+    margin-bottom: 10%;
+}
+
+#searchDiv{
+    margin: 2vw auto;
+    grid-column: 1/4;
+    justify-content: center;
+    align-items: center;
+}
+#form1{
+    padding-left: 2rem;
+    font-size: 16px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10rem 0 0 10rem;
+}
+
+.recipe-card {
+    margin: 10% auto;
+    font-size: 14px;
+    grid-column: 2/4;
+}
+.recipe-card h2{
+    text-align: center;
+}
+.recipe-card img{
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    /* margin-left: 15%; */
+}
+.recipe-card p{
+    text-indent: 20px;
+    margin:3% 5%;
+}
+.recipe-card ul{
+    margin-left: 5%;
+}
+.recipe-card footer{
+    text-align: right;
+    margin-right: 5%;
+}
+
+.recipeLinks:hover {
+    cursor: default;
+}
+.recipeHover:hover {
+    cursor: pointer;
+}
+
+
+/* BoardUser CSS */
+
+.createRecipeLabels{
+    display: inline;
+    width: 150px;
+    font-size: 14px;
+    font-weight: bold;
+    color: orange;
+}
+
+.createRecipeInputs{
+    margin:2%;
+    width: 350px;
+    font-size: 12px;
+    padding: 0.25%;
+}
+
+.createRecipeInputs:disabled{
+    margin:2%;
+    width: 350px;
+    background-color: white;
+}
+
+.createRecipeButton{
+    margin: 3% auto;
+    font-weight: bold;
+}
+.updateRecipeButton{
+    display: inline;
+    font-weight: bold;   
+}
+.removeRecipeButton{
+    display: inline;
+    margin-left: 2%;  
+    color: red;
+    font-weight: bold;
+}
+#createRecipeDiv{
+    margin: 5% 5% 25% 5%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+.ingredientSpan {
+    font-size: 14px;
+    margin-top: 4%;
+    margin-right: 6%;
+    margin-left: 2%;
+    padding: 4% 2%;
+    text-align: center;
+    /* border: 2px black solid; */
+    background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+    color: white;
+    border-radius: 2rem;
+    
+}
+.ingredientSpan:hover {
+    cursor: pointer;
+}
+
+.ingredientsDiv{
+    /* display: "inline-block";*/
+
+    padding:10% 2%;
+    width: 360px;
+    display: grid;
+    /* grid-template-rows: 10rem minmax(100rem, auto); */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column: 2;
+}
+
+.myRecipesDiv{
+    margin: 5% 0;
+}
+.myRecipesHeader{
+    margin-top: 15%;
+    font-size: 24px;
+    text-decoration: underline;
+    text-align: center;
+    color: orange;
+}
+
+#MyRecipesUL{
+    list-style-type: none;
+}
+.createRecipesHeader{
+    text-align: center;
+    color: orange;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    font-size: 24px;
+    /* text-decoration: underline; */
+}
+.myRecipesList {
+    font-size: 16px;
+    margin: 2% 0;
+    border-radius: 1rem;
+    color: black;
+}
+.myRecipesList:hover{
+    cursor: pointer;
+    background-color: rgb(214, 214, 228);
+}
+.myRecipesImages{
+    width: 50px;
+    border-radius: 30%;
+    margin: 6%;
+    height: 50px;
+    object-fit: cover;
+}
+
+.requires{
+    color: red;
+    display: none;
+    margin-top: 25%;
+}
+#createRecipeTextArea{
+    /* display: inline;  */
+    grid-column: 2;
+    width: 350px;
+    height: 100px;
+    text-indent: 25px;
+    margin: 2%;
+    font-size: 14px;
+}
+#searchResultsListDiv {
+    grid-column: 2/4;
+    
+}
