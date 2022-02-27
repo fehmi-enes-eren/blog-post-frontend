@@ -1,8 +1,5 @@
 import axios from "axios";
-import { API_BASE } from "../services/constants"
-
-const API_URL = API_BASE + "auth/";
-
+const API_URL = "http://localhost:8080/api/auth/";
 const register = (username, email, password) => {
   return axios.post(API_URL + "signup", {
     username,
@@ -10,7 +7,6 @@ const register = (username, email, password) => {
     password,
   });
 };
-
 const login = (username, password) => {
   return axios
     .post(API_URL + "signin", {
@@ -21,24 +17,14 @@ const login = (username, password) => {
       if (response.data.accessToken) {
         localStorage.setItem("user", JSON.stringify(response.data));
       }
-
       return response.data;
     });
 };
-
 const logout = () => {
   localStorage.removeItem("user");
 };
-
-const getCurrentUser = () => {
-  return JSON.parse(localStorage.getItem("user"));
+export default {
+  register,
+  login,
+  logout,
 };
-
-const myObject = {
-    register,
-    login,
-    logout,
-    getCurrentUser,
-  };
-
-export default myObject;
