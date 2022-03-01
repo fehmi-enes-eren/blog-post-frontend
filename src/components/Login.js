@@ -40,7 +40,7 @@ const Login = (props) => {
         .then(() => {
           props.history.push("/profile");
           window.location.reload();
-          console.log(props.history)
+          console.log(props.history);
         })
         .catch(() => {
           setLoading(false);

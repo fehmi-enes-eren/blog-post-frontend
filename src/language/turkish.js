@@ -1,7 +1,11 @@
 const navbar = {
     login: "Giris Yap",
     home: "Anasayfa",
-    signUp: "Kayit Ol"
+    signUp: "Kayit Ol",
+    adminBoard: "Yonetici",
+    moderatorBoard: "Moderator",
+    user: "Kullanici",
+    logOut: "CikisYap"
 };
 
 const register = {

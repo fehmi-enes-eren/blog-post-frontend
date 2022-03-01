@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Navigate } from 'react-router-dom';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setLanguage } from "../actions/language";
+
 const Profile = () => {
   const { user: currentUser } = useSelector((state) => state.auth);
+  //const { language } = useSelector((state) => state.language);
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(setLanguage(currentUser.language));
+    console.log(currentUser)
+  },[])
   if (!currentUser) {
     return <Navigate to="/login" />;
   }

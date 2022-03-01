@@ -76,7 +76,7 @@ const Register = () => {
     setSuccessful(false);
     form.current.validateAll();
     if (checkBtn.current.context._errors.length === 0) {
-      dispatch(register(username, email, password))
+      dispatch(register(username, email, password,language))
         .then(() => {
           setSuccessful(true);
         })

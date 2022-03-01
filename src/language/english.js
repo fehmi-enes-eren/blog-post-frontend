@@ -1,7 +1,11 @@
 const navbar = {
     login: "Login",
     home: "Home",
-    signUp: "Sign Up"
+    signUp: "Sign Up",
+    adminBoard: "Admin",
+    moderatorBoard: "Moderator",
+    user: "User",
+    logOut: "LogOut"
 };
 const register = {
     username: "Username",
