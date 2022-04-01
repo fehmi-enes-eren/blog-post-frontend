@@ -1,10 +1,13 @@
 const navbar = {
     login: "Login",
     home: "Home",
+    archive: "Archive",
+    travel: "Travel",
     signUp: "Sign Up",
     adminBoard: "Admin",
     moderatorBoard: "Moderator",
     user: "User",
+    profile: "Profile",
     logOut: "LogOut"
 };
 const register = {
