@@ -5,6 +5,7 @@ import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 import { register } from "../actions/auth";
+import { Link } from "react-router-dom";
 const required = (value) => {
   if (!value) {
     return (
@@ -130,7 +131,8 @@ const Register = () => {
                 />
               </div>
               <div className="form-group">
-                <button className="btn btn-primary btn-block">{registerProps.signUp}</button>
+                <button className="btn btn-primary btn-block loginButton">{registerProps.signUp}</button>
+                <div className="registerDiv">{registerProps.loginSpan}<Link to="/login" className="registerLink">{registerProps.login}</Link></div>
               </div>
             </div>
           )}

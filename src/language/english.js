@@ -14,9 +14,19 @@ const register = {
     username: "Username",
     email: "Email",
     password: "Password",
-    signUp: "Sign Up"
+    signUp: "Sign Up",
+    login: "Login",
+    loginSpan: `If you have an account!`
+}
+
+const login = {
+    username: "Username",
+    password: "Password",
+    login: "Login",
+    register: "Register",
+    registerSpan: `Don't you have an account, yet?`
 }
 
 export {
-    navbar,register
+    navbar,register,login
 }

@@ -3,8 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { logout } from "../actions/auth";
 import { Link } from 'react-router-dom';
 import Logo from "../images/logo.png"
-import Dropdown from 'react-bootstrap/Dropdown';
-//import Button from 'react-bootstrap/Button';
 import Button from './Button';
 import "../styles/navbar.css";
 
@@ -36,12 +34,18 @@ export default function Navbar() {
       setTimeout(()=>{
         logoRef.current.classList.remove('fa-spin')
       },4000)
-    },[])
+    },[]);
 
+    window.addEventListener("resize", ()=>{
+      const widthCheck = window.innerWidth;
+      if(widthCheck>960)setClicked(false)
 
-    const HandleRespBar = (e) => {
+    });
+
+    const HandleRespBar = () => {
       setClicked(!clicked)
     }
+    
   return (
     <nav className="navItems">
           <Link to={"/"} className="navbarLogo">
@@ -79,46 +83,21 @@ export default function Navbar() {
                 </Link>
               </li>
             )}
-            {showAdminBoard && (
-              <li className="navItem" onClick={HandleRespBar}>
-                <Link to={"/admin"} className="navLink">
-                {navbarProps.adminBoard}
-                </Link>
-              </li>
-            )}
-            {currentUser && (
-              <li className="navItem" onClick={HandleRespBar}>
-                <Link to={"/user"} className="navLink">
-                {navbarProps.user}
-                </Link>
-              </li>
-            )}
-            {!clicked ? (
-              currentUser ? (
-                <div className="" style={{marginRight:"2%"}}>
-                
-                  <Dropdown className="dropdownButton">
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                      {currentUser.username}
-                    </Dropdown.Toggle>
-                  <Dropdown.Menu className='dropProfileMenu'>
-                    <Dropdown.Item href="/profile" className="dropItem" onClick={HandleRespBar}>Profile</Dropdown.Item>
-                    <Dropdown.Item href="/user" className="dropItem" onClick={HandleRespBar}>My Account</Dropdown.Item>
-                    <Dropdown.Item  href="/" onClick={logOut} className="dropItem">Log Out</Dropdown.Item>
-                </Dropdown.Menu>
-                  </Dropdown>
-                </div>
-              ) : (
-                <div className="">
-                  <Link to={"/login"}>
-                      <Button>Login / Sign Up</Button>
-                    </Link>{' '}
-                </div>
-              )
-            ) : 
-            currentUser ? (
-              <div className="" style={{marginRight:"2%"}}>
-              
+            
+            {currentUser ? (
+              <>
+                {showAdminBoard && (
+                  <li className="navItem" onClick={HandleRespBar}>
+                    <Link to={"/admin"} className="navLink">
+                    {navbarProps.adminBoard}
+                    </Link>
+                  </li>
+                )}
+                <li className="navItem" onClick={HandleRespBar}>
+                  <Link to={"/user"} className="navLink">
+                  {navbarProps.user}
+                  </Link>
+                </li>
                 <li className="navItem" onClick={HandleRespBar}>
                   <Link to={"/profile"} className="navLink">
                   {navbarProps.profile}
@@ -129,15 +108,15 @@ export default function Navbar() {
                   {navbarProps.logOut}
                   </Link>
                 </li>
-              </div>
-            ) : (
+              </>
+            ) : 
               <div className="">
                 <Link to={"/login"} onClick={HandleRespBar}>
-                    <Button>Login / Sign Up</Button>
-                  </Link>{' '}
+                  <Button>{navbarProps.login}</Button>
+                </Link>{' '}
               </div>
-            )}
-            
+            }
+ 
           </ul>
           
           

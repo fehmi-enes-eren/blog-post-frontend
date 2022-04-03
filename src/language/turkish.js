@@ -15,9 +15,19 @@ const register = {
     username: "Kullanici Adi",
     email: "Email",
     password: "Sifre",
-    signUp: "Kayit Ol"
+    signUp: "Kayit Ol",
+    login: "Giris Yap",
+    loginSpan: `Eger hesabiniz varsa!`
+}
+
+const login = {
+    username: "Kullanici Adi",
+    password: "Sifre",
+    login: "Giris Yap",
+    register: "Kayit Ol",
+    registerSpan: `Hala hesabiniz yok mu?`
 }
 
 export {
-    navbar,register
+    navbar,register,login
 }

@@ -50,28 +50,35 @@
 
 .navMenu{
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(7, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
-    width: 70vw;
+    width: 90vw;
     justify-content: end;
+    margin-bottom: 0;
 }
 
-.navButton{
-    background-color: greenyellow;
-    border-radius: 0.25rem;
-    padding: 6px 12px;
-}
-.navButton:hover{
-    background-color: rgb(147, 223, 34);
+.dropdownDiv {
+    display: flex;
+    align-items: center;
 }
 
 .dropProfileMenu {
-    border-radius: 1rem;
+    /* border-radius: 1rem;
     background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
     width: 153px;
-    text-align: center
+    text-align: center */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 80px;
+    left: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    padding-bottom: 1rem ;
+    padding-left: 0;
 }
 
 .fa-bars {
